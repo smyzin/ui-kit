@@ -57,10 +57,10 @@ export default new Router({
         {path: '/', name: 'HelloWorld', component: HelloWorld},
 
         {path: '/color', name: 'Цвет', component: Color, meta: { next: {name: 'Типографика', path: '/typography'} }},
-        {path: '/typography', name: 'Типографика', component: Typography,  meta: { next: {name: 'Button', path: '/button'}, previous: {name: 'Цвет', path: '/color'} }},
-        {path: '/button', name: 'Button', component: Button, meta: { next: {name: 'Radio', path: '/radio'}, previous: {name: 'Типографика', path: '/typography'} }},
+        {path: '/typography', name: 'Типографика', component: Typography,  meta: { next: {name: 'Кнопки', path: '/button'}, previous: {name: 'Цвет', path: '/color'} }},
+        {path: '/button', name: 'Кнопки', component: Button, meta: { next: {name: 'Radio', path: '/radio'}, previous: {name: 'Типографика', path: '/typography'} }},
 
-        {path: '/radio', name: 'Radio', component: Radio, meta: { next: {name: 'Checkbox', path: '/checkbox'}, previous: {name: 'Button', path: '/button'} }},
+        {path: '/radio', name: 'Radio', component: Radio, meta: { next: {name: 'Checkbox', path: '/checkbox'}, previous: {name: 'Кнопки', path: '/button'} }},
         {path: '/checkbox', name: 'Checkbox', component: Checkbox, meta: { next: {name: 'Input', path: '/input'}, previous: {name: 'Radio', path: '/radio'} }},
         {path: '/input', name: 'Input', component: Input, meta: { next: {name: 'InputNumber', path: '/input-mask'}, previous: {name: 'Checkbox', path: '/checkbox'} }},
         {path: '/input-number', name: 'InputNumber', component: InputNumber, meta: { next: {name: 'Select', path: '/select'}, previous: {name: 'Input', path: '/input'} }},

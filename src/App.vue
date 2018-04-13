@@ -12,9 +12,9 @@
                     <div class="demo-menu-block">
                         <el-menu-item-group>
                             <template slot="title">Базовые</template>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/color')">Color</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/typography')">Typography</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/button')">Button</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/color')">Цвет</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/typography')">Типографика</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/button')">Кнопки</el-button></el-menu-item>
                         </el-menu-item-group>
                         <el-menu-item-group>
                             <template slot="title">Форма</template>
