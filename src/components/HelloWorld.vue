@@ -4,7 +4,7 @@
         <p class="basic-text">Some content</p>
         <div class="demo-block-container">
             <div class="demo-block-container__source">
-
+                {{ msg }}
             </div>
         </div>
     </div>
