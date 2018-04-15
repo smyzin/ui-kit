@@ -106,6 +106,24 @@
         margin: 0;
         font-family: 'Roboto', sans-serif;
     }
+    .code-block{
+        display: block;
+        line-height: 1.8;
+        font-family: Menlo,Monaco,Consolas,Courier,monospace;
+        font-size: 12px;
+        padding: 18px 24px !important;
+        background-color: #fafafa;
+        border: 1px solid #eaeefb;
+        margin-bottom: 20px;
+        margin-top: 15px;
+        color: black;
+        border-radius: 4px;
+        -webkit-font-smoothing: auto;
+        & .blue{ color: #3182bd; }
+        & .green{ color: #31a354; }
+        & .comment{ color: #636363; }
+        & .name{ color: #756bb1; }
+    }
     .title{
         font-family: 'Roboto', sans-serif;
         font-size: 16px;
