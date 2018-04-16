@@ -18,6 +18,16 @@
                     label="Size">
             </el-table-column>
         </el-table>
+        <div>
+            <h1>H1 TEXT</h1>
+            <h2>H2 TEXT</h2>
+            <h3>H3 TEXT</h3>
+            <h4>H4 TEXT</h4>
+            <h5>H5 TEXT</h5>
+            <h6>H6 TEXT</h6>
+            <p>Paragraph text</p>
+            <span>Some stupid span text</span>
+        </div>
     </div>
 </template>
 

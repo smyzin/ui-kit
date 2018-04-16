@@ -201,12 +201,28 @@
         <p class="basic-text">Вы можете указать как предложения будут отображаться.</p>
         <div class="demo-block-container">
             <div class="demo-block-container__source">
-                <el-autocomplete
+                <el-autocomplete disabled="true"
                         popper-class="my-autocomplete"
                         v-model="state3"
                         :fetch-suggestions="querySearch"
                         placeholder="Начните ввод"
                         @select="handleSelect">
+                    <i
+                            class="el-icon-edit el-input__icon"
+                            slot="suffix"
+                            @click="handleIconClick">
+                    </i>
+                    <template slot-scope="props">
+                        <div class="value">{{ props.item.value }}</div>
+                        <span class="link">{{ props.item.link }}</span>
+                    </template>
+                </el-autocomplete>
+                <el-autocomplete
+                                 popper-class="my-autocomplete"
+                                 v-model="state3"
+                                 :fetch-suggestions="querySearch"
+                                 placeholder="Начните ввод"
+                                 @select="handleSelect">
                     <i
                             class="el-icon-edit el-input__icon"
                             slot="suffix"

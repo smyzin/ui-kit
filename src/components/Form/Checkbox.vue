@@ -62,7 +62,7 @@
         <div class="demo-block-container">
             <div class="demo-block-container__source">
                 <div>
-                    <el-checkbox-group v-model="checkboxGroup1">
+                    <el-checkbox-group v-model="checkboxGroup1" size="large">
                         <el-checkbox-button v-for="city in cities" :label="city" :key="city">{{city}}</el-checkbox-button>
                     </el-checkbox-group>
                 </div>
@@ -89,8 +89,8 @@
         <div class="demo-block-container">
             <div class="demo-block-container__source">
                 <div>
-                    <el-checkbox v-model="checked3" label="Опция 1" border></el-checkbox>
-                    <el-checkbox v-model="checked4" label="Опция 2" border></el-checkbox>
+                    <el-checkbox v-model="checked3" label="Опция 1" border size="large"></el-checkbox>
+                    <el-checkbox v-model="checked4" label="Опция 2" border size="large"></el-checkbox>
                 </div>
                 <div style="margin-top: 20px">
                     <el-checkbox v-model="checked5" label="Опция 1" border size="medium"></el-checkbox>

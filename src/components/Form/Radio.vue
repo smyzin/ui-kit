@@ -35,7 +35,7 @@
         <div class="demo-block-container">
             <div class="demo-block-container__source">
                 <div>
-                    <el-radio-group v-model="radio3">
+                    <el-radio-group v-model="radio3" size="large">
                         <el-radio-button label="New York"></el-radio-button>
                         <el-radio-button label="Washington"></el-radio-button>
                         <el-radio-button label="Los Angeles"></el-radio-button>
@@ -74,8 +74,8 @@
         <div class="demo-block-container">
             <div class="demo-block-container__source">
                 <div>
-                    <el-radio v-model="radio7" label="1" border>Опция A</el-radio>
-                    <el-radio v-model="radio7" label="2" border>Опция B</el-radio>
+                    <el-radio v-model="radio7" label="1" border size="large">Опция A</el-radio>
+                    <el-radio v-model="radio7" label="2" border size="large">Опция B</el-radio>
                 </div>
                 <div style="margin-top: 20px">
                     <el-radio v-model="radio8" label="1" border size="medium">Опция A</el-radio>

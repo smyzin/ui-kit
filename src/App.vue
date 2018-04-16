@@ -100,11 +100,11 @@
 </script>
 
 <style lang="scss">
-    @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic-ext');
+
 
     body{
         margin: 0;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto', 'Arial', sans-serif;
     }
     .code-block{
         display: block;
