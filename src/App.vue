@@ -4,9 +4,9 @@
             <el-aside width="200px" class="asideBlock">
                 <el-menu>
                     <el-menu-item-group>
-                        <template slot="title">Made by Upoint Team with</template>
+                        <template slot="title"><div style="text-align: center;">Made by Upoint Team with</div></template>
                         <a href="https://element.eleme.io/" title="Element" target="_blank">
-                            <img src="../static/elementio.svg" alt="Element">
+                            <img src="../static/elementio.svg" alt="Element" style="width: 50%;">
                         </a>
                     </el-menu-item-group>
                     <div class="demo-menu-block">
@@ -23,7 +23,7 @@
                             <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/input')">Input</el-button></el-menu-item>
                             <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/input-number')">InputNumber</el-button></el-menu-item>
                             <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/select')">Select</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/cascader')">Cascader!!!</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/cascader')">Cascader</el-button></el-menu-item>
                             <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/switch')">Switch</el-button></el-menu-item>
                             <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/slider')">Slider</el-button></el-menu-item>
                             <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/time-picker')">TimePicker</el-button></el-menu-item>
@@ -123,6 +123,9 @@
         & .green{ color: #31a354; }
         & .comment{ color: #636363; }
         & .name{ color: #756bb1; }
+    }
+    .el-menu-item .el-menu-item__custom{
+        padding-left: 10px !important;
     }
     .title{
         font-family: 'Roboto', sans-serif;
@@ -238,8 +241,10 @@
         }
     }
     .el-menu-item-group__title{
-        padding: 7px 0 7px 0px;
-        padding-left: 0 !important;
+        padding: 15px 0 7px 0;
+        text-align: left;
+        padding-left: 20px !important;
+        font-size: 12px;
     }
     .el-menu-item__custom{ height: auto; }
     .demo-container__main{
