@@ -5,8 +5,8 @@ import App from './App'
 import router from './router'
 
 import element from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-// import './assets/upoint-ui/index.css';
+// import 'element-ui/lib/theme-chalk/index.css';
+import './assets/upoint-ui/index.min.css';
 import locale from 'element-ui/lib/locale/lang/ru-RU.js'
 
 Vue.use(element, {locale, size:'mini'});
@@ -19,4 +19,4 @@ new Vue({
     router,
     components: {App},
     template: '<App/>'
-})
+});

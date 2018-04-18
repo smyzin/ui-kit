@@ -55,10 +55,14 @@
             <div class="demo-block-container__source">
                 <el-switch
                         v-model="value6"
+                        active-text="Оплатить за месяц"
+                        inactive-text="Оплатить за год"
                         disabled>
                 </el-switch>
                 <el-switch
                         v-model="value7"
+                        active-text="Оплатить за месяц"
+                        inactive-text="Оплатить за год"
                         disabled>
                 </el-switch>
             </div>

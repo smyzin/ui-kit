@@ -4,7 +4,7 @@
         <p class="basic-text">Для того, чтобы раскрыть выпадающий список наведите курсор на выпадающее меню. По умолчанию вызванный элемент отображается как <code>slot</code>, а раскрывающаяся часть <code>slot</code> именуется <code>dropdown</code>. По умолчанию раскрывающийся список раскрывается при наведении на него мыши.</p>
         <div class="demo-block-container">
             <div class="demo-block-container__source">
-                <el-dropdown>
+                <el-dropdown type="primary">
                     <span class="el-dropdown-link">
                         Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
                     </span>
@@ -191,7 +191,7 @@
 <style scoped>
     .el-dropdown-link {
         cursor: pointer;
-        color: #409EFF;
+        /*color: #409EFF;*/
     }
     .el-icon-arrow-down {
         font-size: 12px;
@@ -205,10 +205,6 @@
     .el-icon-arrow-down {
         font-size: 12px;
     }
-    .el-dropdown-link {
-        cursor: pointer;
-        color: #409EFF;
-    }
     .el-icon-arrow-down {
         font-size: 12px;
     }
@@ -218,16 +214,8 @@
         font-size: 14px;
         margin-bottom: 20px;
     }
-    .el-dropdown-link {
-        cursor: pointer;
-        color: #409EFF;
-    }
     .el-icon-arrow-down {
         font-size: 12px;
-    }
-    .el-dropdown-link {
-        cursor: pointer;
-        color: #409EFF;
     }
     .el-icon-arrow-down {
         font-size: 12px;

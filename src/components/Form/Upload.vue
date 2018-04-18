@@ -150,10 +150,10 @@
                 console.log(file);
             },
             handleExceed(files, fileList) {
-                this.$message.warning(`The limit is 3, you selected ${files.length} files this time, add up to ${files.length + fileList.length} totally`);
+                this.$message.warning(`Лимит для загрузки 3 файла`);
             },
             beforeRemove(file, fileList) {
-                return this.$confirm(`确定移除 ${ file.name }？`);
+                return this.$confirm(`Вы действительно хотите удалить файл "${ file.name }"?`);
             },
             handleAvatarSuccess(res, file) {
                 this.imageUrl = URL.createObjectURL(file.raw);
@@ -163,10 +163,10 @@
                 const isLt2M = file.size / 1024 / 1024 < 2;
 
                 if (!isJPG) {
-                    this.$message.error('Avatar picture must be JPG format!');
+                    this.$message.error('Изображение должно быть в формате JPG!');
                 }
                 if (!isLt2M) {
-                    this.$message.error('Avatar picture size can not exceed 2MB!');
+                    this.$message.error('Размер изображения не должен превышать 2MB!');
                 }
                 return isJPG && isLt2M;
             },
@@ -185,44 +185,46 @@
 </script>
 
 <style lang="scss">
-    .demo-block-container__source{
-        .el-upload{
-            border: 1px dashed #d9d9d9;
-            border-radius: 6px;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            i{
-                font-size: 28px;
-                color: #8c939d;
-                width: 178px;
-                height: 178px;
-                line-height: 178px;
-                text-align: center;
-            }
-        }
-    }
-    .avatar-uploader .el-upload {
-        border: 1px dashed #d9d9d9;
-        border-radius: 6px;
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-    }
-    .avatar-uploader .el-upload:hover {
-        border-color: #409EFF;
-    }
-    .avatar-uploader-icon {
-        font-size: 28px;
-        color: #8c939d;
-        width: 178px;
-        height: 178px;
-        line-height: 178px;
-        text-align: center;
-    }
-    .avatar {
-        width: 178px;
-        height: 178px;
-        display: block;
-    }
+    /*.demo-block-container__source{*/
+        /*.el-upload{*/
+            /*!*border: 1px dashed #d9d9d9;*!*/
+            /*border-radius: 6px;*/
+            /*cursor: pointer;*/
+            /*position: relative;*/
+            /*overflow: hidden;*/
+            /*i{*/
+                /*font-size: 28px;*/
+                /*color: #8c939d;*/
+                /*width: 178px;*/
+                /*height: 178px;*/
+                /*line-height: 178px;*/
+                /*text-align: center;*/
+            /*}*/
+        /*}*/
+    /*}*/
+
+
+    /*.avatar-uploader .el-upload {*/
+        /*border: 1px dashed #d9d9d9;*/
+        /*border-radius: 6px;*/
+        /*cursor: pointer;*/
+        /*position: relative;*/
+        /*overflow: hidden;*/
+    /*}*/
+    /*.avatar-uploader .el-upload:hover {*/
+        /*border-color: #ff5722;*/
+    /*}*/
+    /*.avatar-uploader-icon {*/
+        /*font-size: 28px;*/
+        /*color: #8c939d;*/
+        /*width: 178px;*/
+        /*height: 178px;*/
+        /*line-height: 178px;*/
+        /*text-align: center;*/
+    /*}*/
+    /*.avatar {*/
+        /*width: 178px;*/
+        /*height: 178px;*/
+        /*display: block;*/
+    /*}*/
 </style>

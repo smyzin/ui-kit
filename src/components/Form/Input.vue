@@ -123,7 +123,7 @@
                 </div>
                 <div style="margin-top: 15px;">
                     <el-input placeholder="Введите текст" v-model="input5">
-                        <el-select v-model="select" class="el-input__inner-select" slot="prepend" placeholder="Выберите">
+                        <el-select v-model="select" slot="prepend" placeholder="Выберите">
                             <el-option label="Ресторан" value="1"></el-option>
                             <el-option label="Номер заказа" value="2"></el-option>
                             <el-option label="Телефон" value="3"></el-option>
@@ -201,7 +201,7 @@
         <p class="basic-text">Вы можете указать как предложения будут отображаться.</p>
         <div class="demo-block-container">
             <div class="demo-block-container__source">
-                <el-autocomplete disabled="true"
+                <el-autocomplete disabled="disabled"
                         popper-class="my-autocomplete"
                         v-model="state3"
                         :fetch-suggestions="querySearch"
@@ -329,20 +329,38 @@
 </script>
 
 <style lang="scss">
-    .my-autocomplete {
-        li {
-            line-height: normal;
-            padding: 7px;
+    /*.my-autocomplete {*/
+        /*li {*/
+            /*line-height: normal;*/
+            /*padding: 7px;*/
 
-            .value {
-                text-overflow: ellipsis;
-                overflow: hidden;
-            }
-            .link {
-                font-size: 12px;
-                color: #b4b4b4;
-            }
-        }
+            /*.value {*/
+                /*text-overflow: ellipsis;*/
+                /*overflow: hidden;*/
+            /*}*/
+            /*.link {*/
+                /*font-size: 12px;*/
+                /*color: #b4b4b4;*/
+            /*}*/
+        /*}*/
+    /*}*/
+    /*.el-select__mixed .el-input__mixed {*/
+        /*width: 110px;*/
+    /*}*/
+    /*.el-input__inner-select{*/
+        /*width: 110px;*/
+    /*}*/
+    /*.input-with-select__mixed .el-input-group__prepend__mixed {*/
+        /*background-color: #fff;*/
+    /*}*/
+
+    .demo-el-textarea{
+        width: 300px;
+    }
+    .demo-title{
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #5e6d82;
     }
     .demo-input-suffix{
         padding: 5px;
@@ -351,25 +369,7 @@
         display: inline-block;
         width: 130px;
     }
-    .el-select__mixed .el-input__mixed {
-        width: 110px;
-    }
-    .el-input__inner-select{
-        width: 110px;
-    }
-    .input-with-select__mixed .el-input-group__prepend__mixed {
-        background-color: #fff;
-    }
     .demo-el-input-icon{
         width: 140px;
-    }
-    .demo-el-textarea{
-        font-family: 'Roboto', sans-serif !important;
-        width: 300px;
-    }
-    .demo-title{
-        margin-bottom: 10px;
-        font-size: 14px;
-        color: #5e6d82;
     }
 </style>

@@ -16,22 +16,22 @@
             <el-col :xs="12" :span="6" class="demo-col">
                 <div class="demo-color-box demo-color-box__color_success">
                     Success
-                    <div class="demo-color-box__value">#67c23a</div>
-                    <div class="demo-color-box__value">rgba(103, 194, 58, 1)</div>
+                    <div class="demo-color-box__value">#13ce66</div>
+                    <div class="demo-color-box__value">rgba(19, 206, 102, 1)</div>
                 </div>
             </el-col>
             <el-col :xs="12" :span="6" class="demo-col">
                 <div class="demo-color-box demo-color-box__color_warning">
                     Warning
-                    <div class="demo-color-box__value">#e6a23c</div>
-                    <div class="demo-color-box__value">rgba(230, 162, 60, 1)</div>
+                    <div class="demo-color-box__value">#f7ba2ac</div>
+                    <div class="demo-color-box__value">rgba(247, 186, 42, 1)</div>
                 </div>
             </el-col>
             <el-col :xs="12" :span="6" class="demo-col">
                 <div class="demo-color-box demo-color-box__color_danger">
                     Danger
-                    <div class="demo-color-box__value">#f56c6c</div>
-                    <div class="demo-color-box__value">rgba(245, 108, 108, 1)</div>
+                    <div class="demo-color-box__value">#ff4949</div>
+                    <div class="demo-color-box__value">rgba(255, 73, 73, 1)</div>
                 </div>
             </el-col>
             <el-col :xs="12" :span="6" class="demo-col">
@@ -43,7 +43,7 @@
             </el-col>
         </el-row>
 
-        <h2 class="subtitle">Нейтральные цвета</h2>
+        <h2 class="subtitle">Нейтральные цвета <i class="mdi mdi-bell"></i></h2>
         <el-row :gutter="10">
             <el-col :xs="12" :span="6" class="demo-col">
                 <div class="demo-color-box-group">
@@ -125,9 +125,9 @@
     .demo-color-box-group .demo-color-box:last-child{ border-radius: 0 0 4px 4px; }
 
     .demo-color-box__color_primary{ background-color: #ff5722; }
-    .demo-color-box__color_success{ background-color: #67c23a; }
-    .demo-color-box__color_warning{ background-color: #e6a23c; }
-    .demo-color-box__color_danger{ background-color: #f56c6c; }
+    .demo-color-box__color_success{ background-color: #13ce66; }
+    .demo-color-box__color_warning{ background-color: #f7ba2a; }
+    .demo-color-box__color_danger{ background-color: #ff4949; }
     .demo-color-box__color_info{ background-color: #909399; }
     .demo-color-box__color-text_primary{ background-color: #263238; }
     .demo-color-box__color-text_regular{ background-color: #515254; }

@@ -1,7 +1,7 @@
 <template>
     <div style="text-align: left;">
         <h2 class="title">Использование по умолчанию</h2>
-        <p class="basic-text">Чекбокс может использоватьсяотдельно для обозначения одного из двух состояний.</p>
+        <p class="basic-text">Чекбокс может использоваться отдельно для обозначения одного из двух состояний.</p>
         <div class="demo-block-container">
             <div class="demo-block-container__source">
                 <!-- `checked` should be true or false -->

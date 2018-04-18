@@ -74,10 +74,11 @@
             return {
                 tags: [
                     { name: 'Тег 1', type: '' },
-                    { name: 'Тег 2', type: 'success' },
-                    { name: 'Тег 3', type: 'info' },
-                    { name: 'Тег 4', type: 'warning' },
-                    { name: 'Тег 5', type: 'danger' }
+                    { name: 'Тег 2', type: 'primary' },
+                    { name: 'Тег 3', type: 'success' },
+                    { name: 'Тег 4', type: 'info' },
+                    { name: 'Тег 5', type: 'warning' },
+                    { name: 'Тег 6', type: 'danger' }
                 ],
                 dynamicTags: ['Тег 1', 'Тег 2', 'Тег 3'],
                 inputVisible: false,

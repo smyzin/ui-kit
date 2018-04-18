@@ -1,10 +1,12 @@
 <template>
     <div style="text-align: left;">
-        <h2 class="title">Main Page</h2>
-        <p class="basic-text">Some content</p>
+        <h2 class="title">Срочно!!!!</h2>
+        <p class="basic-text">Пока другие не знают как - обойди блокировку Telegram с помощью VPN</p>
         <div class="demo-block-container">
-            <div class="demo-block-container__source">
-                  {{ msg }}
+            <div class="demo-block-container__source" style="text-align: center;">
+                <video autoplay loop="loop">
+                    <source src="../assets/123.mp4">
+                </video>
             </div>
         </div>
     </div>

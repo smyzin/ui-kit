@@ -36,8 +36,10 @@
             <div class="demo-block-container__source">
                 <el-rate
                         v-model="value4"
-                        :icon-classes="['el-icon-sort-down', 'el-icon-sort-up', 'el-icon-circle-check']"
-                        void-icon-class="el-icon-circle-check-outline"
+                        :icon-classes="[
+                            'mdi mdi-emoticon-sad', 'mdi mdi-emoticon-happy', 'mdi mdi-emoticon-excited',
+                        ]"
+                        void-icon-class="mdi mdi-emoticon-neutral"
                         :colors="['#99A9BF', '#F7BA2A', '#FF9900']">
                 </el-rate>
             </div>

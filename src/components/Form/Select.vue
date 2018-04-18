@@ -89,7 +89,7 @@
             </div>
         </div>
 
-        <h2 class="title">Собствыенный шаблон</h2>
+        <h2 class="title">Собственный шаблон</h2>
         <p class="basic-text">Вы можете добавить свой HTML шаблон для опций выпадающего списка.</p>
         <div class="demo-block-container">
             <div class="demo-block-container__source">

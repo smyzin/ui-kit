@@ -116,14 +116,14 @@
         <div class="demo-block-container">
             <div class="demo-block-container__source">
                 <el-row>
-                    <el-button>По умолчанию</el-button>
+                    <!--<el-button>По умолчанию</el-button>-->
                     <el-button size="large">large</el-button>
                     <el-button size="medium">medium</el-button>
                     <el-button size="small">small</el-button>
                     <el-button size="mini">mini</el-button>
                 </el-row>
                 <el-row>
-                    <el-button round>По умолчанию</el-button>
+                    <!--<el-button round>По умолчанию</el-button>-->
                     <el-button size="large" round>large</el-button>
                     <el-button size="medium" round>medium</el-button>
                     <el-button size="small" round>small</el-button>

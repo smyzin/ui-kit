@@ -56,7 +56,7 @@
         </div>
 
         <h2 class="title">Вложенные операции</h2>
-        <p class="basic-text">Вы можете вкладывать "дркгие операции" внутрь вашего 'Popover'. Это более легковесное решение, чем использваоть диалоговые окна.</p>
+        <p class="basic-text">Вы можете вкладывать "другие операции" внутрь вашего 'Popover'. Это более легковесное решение, чем использваоть диалоговые окна.</p>
         <div class="demo-block-container">
             <div class="demo-block-container__source">
                 <el-popover

@@ -552,9 +552,6 @@
         width: 49%;
         text-align: center;
     }
-    .demo-input-suffix{
-        padding: 5px;
-    }
     .demo-input-label {
         display: inline-block;
         width: 410px;
