@@ -62,9 +62,9 @@ export default new Router({
 
         {path: '/radio', name: 'Radio', component: Radio, meta: { next: {name: 'Checkbox', path: '/checkbox'}, previous: {name: 'Кнопки', path: '/button'} }},
         {path: '/checkbox', name: 'Checkbox', component: Checkbox, meta: { next: {name: 'Input', path: '/input'}, previous: {name: 'Radio', path: '/radio'} }},
-        {path: '/input', name: 'Input', component: Input, meta: { next: {name: 'InputNumber', path: '/input-mask'}, previous: {name: 'Checkbox', path: '/checkbox'} }},
+        {path: '/input', name: 'Input', component: Input, meta: { next: {name: 'InputNumber', path: '/input-number'}, previous: {name: 'Checkbox', path: '/checkbox'} }},
         {path: '/input-number', name: 'InputNumber', component: InputNumber, meta: { next: {name: 'Select', path: '/select'}, previous: {name: 'Input', path: '/input'} }},
-        {path: '/select', name: 'Select', component: Select, meta: { next: {name: 'Cascader', path: '/cascader'}, previous: {name: 'InputNumber', path: '/input-mask'} }},
+        {path: '/select', name: 'Select', component: Select, meta: { next: {name: 'Cascader', path: '/cascader'}, previous: {name: 'InputNumber', path: '/input-number'} }},
         {path: '/cascader', name: 'Cascader', component: Cascader, meta: { next: {name: 'Switch', path: '/switch'}, previous: {name: 'Select', path: '/select'} }},
         {path: '/switch', name: 'Switch', component: Switch, meta: { next: {name: 'Slider', path: '/slider'}, previous: {name: 'Cascader', path: '/cascader'} }},
         {path: '/slider', name: 'Slider', component: Slider, meta: { next: {name: 'TimePicker', path: '/time-picker'}, previous: {name: 'Switch', path: '/switch'} }},

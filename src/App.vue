@@ -75,9 +75,9 @@
             </el-aside>
             <el-main class="demo-main-right">
                 <div class="demo-navigation-top">
-                    <el-button type="text" icon="el-icon-back" v-if="$route.meta.previous" @click="goTo($route.meta.previous.path)">{{$route.meta.previous.name}}</el-button>
+                    <el-button type="text" icon="el-icon-back" v-if="$route.meta.previous" @click="top_goTo($route.meta.previous.path)">{{$route.meta.previous.name}}</el-button>
                     <div class="demo-navigation-top__title demo__title page__title">{{$route.name}}</div>
-                    <el-button type="text" v-if="$route.meta.next" @click="goTo($route.meta.next.path)">{{$route.meta.next.name}} <i class="el-icon-back" style="transform: rotate(180deg);"></i></el-button>
+                    <el-button type="text" v-if="$route.meta.next" @click="top_goTo($route.meta.next.path)">{{$route.meta.next.name}} <i class="el-icon-back" style="transform: rotate(180deg);"></i></el-button>
                 </div>
                 <div class="demo-content">
                     <router-view/>
@@ -103,6 +103,23 @@
             }
         },
         methods: {
+            top_goTo(path){
+                let buttons = document.querySelectorAll('.blockBtn');
+                for(let i = 0; i < buttons.length; i++){
+                    if(buttons[i].classList.contains('is-active__btn')){
+                        buttons[i].classList.remove('is-active__btn');
+                        break;
+                    }
+                }
+                for(let j = 0; j < buttons.length; j++){
+                    if(buttons[j].dataset.path === path){
+                        buttons[j].classList.add('is-active__btn');
+                        break;
+                    }
+                }
+
+                this.$router.push(path);
+            },
             goTo(e, path){
                 let buttons = document.querySelectorAll('.blockBtn');
                 for(let i = 0; i < buttons.length; i++){
