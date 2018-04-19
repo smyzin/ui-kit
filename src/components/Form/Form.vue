@@ -15,11 +15,10 @@
                         </el-select>
                     </el-form-item>
                     <el-form-item label="Время деятельности">
-                        <el-col :span="11">
+                        <el-col :span="12">
                             <el-date-picker type="date" placeholder="Выберите дату" v-model="form.date1" style="width: 100%;"></el-date-picker>
                         </el-col>
-                        <el-col class="line" :span="2">-</el-col>
-                        <el-col :span="11">
+                        <el-col :span="12">
                             <el-time-picker type="fixed-time" placeholder="Выберите время" v-model="form.date2" style="width: 100%;"></el-time-picker>
                         </el-col>
                     </el-form-item>
@@ -30,7 +29,7 @@
                         <el-checkbox-group v-model="form.type">
                             <el-checkbox label="Деятельность в интернете" name="type"></el-checkbox>
                             <el-checkbox label="Рекламная деятельность" name="type"></el-checkbox>
-                            <el-checkbox label="Офлайная деятельносмсть" name="type"></el-checkbox>
+                            <el-checkbox label="Офлайная деятельность" name="type"></el-checkbox>
                             <el-checkbox label="Простая узнаваемость бренда" name="type"></el-checkbox>
                         </el-checkbox-group>
                     </el-form-item>
@@ -111,13 +110,12 @@
                         </el-select>
                     </el-form-item>
                     <el-form-item label="Время деятельности" required>
-                        <el-col :span="11">
+                        <el-col :span="12">
                             <el-form-item prop="date1">
                                 <el-date-picker type="date" placeholder="Выберите дату" v-model="ruleForm.date1" style="width: 100%;"></el-date-picker>
                             </el-form-item>
                         </el-col>
-                        <el-col class="line" :span="2">-</el-col>
-                        <el-col :span="11">
+                        <el-col :span="12">
                             <el-form-item prop="date2">
                                 <el-time-picker type="fixed-time" placeholder="Выберите время" v-model="ruleForm.date2" style="width: 100%;"></el-time-picker>
                             </el-form-item>
@@ -235,27 +233,26 @@
         <p class="basic-text">Все компоненты в форме наследуют свой атрибут <code>size</code> из этой Формы. Аналогично, FormItem также имеет атрибут <code>size</code>. Вы можете точно настроить каждый компонент, если вы не хотите, чтобы этот компонент наследовал свой размер от From или FormItem.</p>
         <div class="demo-block-container">
             <div class="demo-block-container__source">
-                <el-form ref="form" :model="sizeForm" label-width="120px" size="mini">
-                    <el-form-item label="Название">
-                        <el-input v-model="sizeForm.name"></el-input>
+                <el-form ref="form" :model="sizeForm" label-width="120px" size="large">
+                    <el-form-item label="Название" size="large">
+                        <el-input v-model="sizeForm.name" size="small"></el-input>
                     </el-form-item>
                     <el-form-item label="Место">
-                        <el-select v-model="sizeForm.region" placeholder="Выберите место">
+                        <el-select v-model="sizeForm.region" placeholder="Выберите место" size="mini">
                             <el-option label="Зона 1" value="shanghai"></el-option>
                             <el-option label="Зона 2" value="beijing"></el-option>
                         </el-select>
                     </el-form-item>
                     <el-form-item label="Время">
-                        <el-col :span="11">
+                        <el-col :span="12">
                             <el-date-picker type="date" placeholder="Выберите дату" v-model="sizeForm.date1" style="width: 100%;"></el-date-picker>
                         </el-col>
-                        <el-col class="line" :span="2">-</el-col>
-                        <el-col :span="11">
+                        <el-col :span="12">
                             <el-time-picker type="fixed-time" placeholder="Выберите время" v-model="sizeForm.date2" style="width: 100%;"></el-time-picker>
                         </el-col>
                     </el-form-item>
                     <el-form-item label="Тип">
-                        <el-checkbox-group v-model="sizeForm.type">
+                        <el-checkbox-group v-model="sizeForm.type" size="mini">
                             <el-checkbox-button label="Онлайн" name="type"></el-checkbox-button>
                             <el-checkbox-button label="Маркетинг" name="type"></el-checkbox-button>
                         </el-checkbox-group>

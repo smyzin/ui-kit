@@ -1,8 +1,8 @@
 <template>
     <div id="app">
         <el-container class="demo-container__main" >
-            <el-aside width="200px" class="asideBlock">
-                <el-menu>
+            <el-aside width="170px" class="asideBlock">
+                <el-menu class="demo-nav-left">
                     <el-menu-item-group>
                         <template slot="title"><div style="text-align: center;">Made by Upoint Team with</div></template>
                         <a href="https://element.eleme.io/" title="Element" target="_blank">
@@ -12,62 +12,62 @@
                     <div class="demo-menu-block">
                         <el-menu-item-group>
                             <template slot="title">Базовые</template>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/color')">Цвет</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/typography')">Типографика</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/button')">Кнопки</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/color" type="text" @click="goTo($event.target, '/color')">Цвет</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/typography" type="text" @click="goTo($event.target, '/typography')">Типографика</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/button" type="text" @click="goTo($event.target, '/button')">Кнопки</el-button></el-menu-item>
                         </el-menu-item-group>
                         <el-menu-item-group>
                             <template slot="title">Форма</template>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/radio')">Radio</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/checkbox')">Checkbox</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/input')">Input</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/input-number')">InputNumber</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/select')">Select</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/cascader')">Cascader</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/switch')">Switch</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/slider')">Slider</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/time-picker')">TimePicker</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/date-picker')">DatePicker</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/date-time-picker')">TimeDatePicker</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/upload')">Upload</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/rate')">Rate</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/color-picker')">ColorPicker</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/transfer')">Transfer</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/form')">Form</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/radio" type="text" @click="goTo($event.target, '/radio')">Radio</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/checkbox" type="text" @click="goTo($event.target, '/checkbox')">Checkbox</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/input" type="text" @click="goTo($event.target, '/input')">Input</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/input-number" type="text" @click="goTo($event.target, '/input-number')">InputNumber</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/select" type="text" @click="goTo($event.target, '/select')">Select</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/cascader" type="text" @click="goTo($event.target, '/cascader')">Cascader</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/switch" type="text" @click="goTo($event.target, '/switch')">Switch</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/slider" type="text" @click="goTo($event.target, '/slider')">Slider</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/time-picker" type="text" @click="goTo($event.target, '/time-picker')">TimePicker</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/date-picker" type="text" @click="goTo($event.target, '/date-picker')">DatePicker</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/date-time-picker" type="text" @click="goTo($event.target, '/date-time-picker')">TimeDatePicker</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/upload" type="text" @click="goTo($event.target, '/upload')">Upload</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/rate" type="text" @click="goTo($event.target, '/rate')">Rate</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/color-picker" type="text" @click="goTo($event.target, '/color-picker')">ColorPicker</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/transfer" type="text" @click="goTo($event.target, '/transfer')">Transfer</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/form" type="text" @click="goTo($event.target, '/form')">Form</el-button></el-menu-item>
                         </el-menu-item-group>
                         <el-menu-item-group>
                             <template slot="title">Данные</template>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/table')">Table</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/tag')">Tag</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/progress')">Progress</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/tree')">Tree</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/pagination')">Pagination</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/badge')">Badge</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/table" type="text" @click="goTo($event.target, '/table')">Table</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/tag" type="text" @click="goTo($event.target, '/tag')">Tag</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/progress" type="text" @click="goTo($event.target, '/progress')">Progress</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/tree" type="text" @click="goTo($event.target, '/tree')">Tree</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/pagination" type="text" @click="goTo($event.target, '/pagination')">Pagination</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/badge" type="text" @click="goTo($event.target, '/badge')">Badge</el-button></el-menu-item>
                         </el-menu-item-group>
                         <el-menu-item-group>
                             <template slot="title">Оповещения</template>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/alert')">Alert</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/loading')">Loading</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/message')">Message</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/message-box')">MessageBox</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/notification')">Notification</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/alert" type="text" @click="goTo($event.target, '/alert')">Alert</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/loading" type="text" @click="goTo($event.target, '/loading')">Loading</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/message" type="text" @click="goTo($event.target, '/message')">Message</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/message-box" type="text" @click="goTo($event.target, '/message-box')">MessageBox</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/notification" type="text" @click="goTo($event.target, '/notification')">Notification</el-button></el-menu-item>
                         </el-menu-item-group>
                         <el-menu-item-group>
                             <template slot="title">Навигация</template>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/nav-menu')">NavMenu</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/tabs')">Tabs</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/breadcrumb')">Breadcrumb</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/dropdown')">Dropdown</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/steps')">Steps</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/nav-menu" type="text" @click="goTo($event.target, '/nav-menu')">NavMenu</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/tabs" type="text" @click="goTo($event.target, '/tabs')">Tabs</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/breadcrumb" type="text" @click="goTo($event.target, '/breadcrumb')">Breadcrumb</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/dropdown" type="text" @click="goTo($event.target, '/dropdown')">Dropdown</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/steps" type="text" @click="goTo($event.target, '/steps')">Steps</el-button></el-menu-item>
                         </el-menu-item-group>
                         <el-menu-item-group>
                             <template slot="title">Разное</template>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/dialog')">Dialog</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/tooltip')">Tooltip</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/popover')">Popover</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/card')">Card</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/carousel')">Carousel</el-button></el-menu-item>
-                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" type="text" @click="goTo('/collapse')">Collapse</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/dialog" type="text" @click="goTo($event.target, '/dialog')">Dialog</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/tooltip" type="text" @click="goTo($event.target, '/tooltip')">Tooltip</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/popover" type="text" @click="goTo($event.target, '/popover')">Popover</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/card" type="text" @click="goTo($event.target, '/card')">Card</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/carousel" type="text" @click="goTo($event.target, '/carousel')">Carousel</el-button></el-menu-item>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/collapse" type="text" @click="goTo($event.target, '/collapse')">Collapse</el-button></el-menu-item>
                         </el-menu-item-group>
                     </div>
                 </el-menu>
@@ -76,7 +76,7 @@
             <el-main class="demo-main-right">
                 <div class="demo-navigation-top">
                     <el-button type="text" icon="el-icon-back" v-if="$route.meta.previous" @click="goTo($route.meta.previous.path)">{{$route.meta.previous.name}}</el-button>
-                    <div class="demo-navigation-top__title title">{{$route.name}}</div>
+                    <div class="demo-navigation-top__title demo__title page__title">{{$route.name}}</div>
                     <el-button type="text" v-if="$route.meta.next" @click="goTo($route.meta.next.path)">{{$route.meta.next.name}} <i class="el-icon-back" style="transform: rotate(180deg);"></i></el-button>
                 </div>
                 <div class="demo-content">
@@ -90,11 +90,36 @@
 <script>
     export default {
         name: 'App',
-        mounted(){ },
-        methods: {
-            goTo(path){
-                this.$router.push(path);
+        watch: {
+            '$route' (to, from) { }
+        },
+        mounted(){
+            let buttons = document.querySelectorAll('.blockBtn');
+            for(let i = 0; i < buttons.length; i++){
+                if(buttons[i].dataset.path === this.$route.path){
+                    buttons[i].classList.add('is-active__btn');
+                    break;
+                }
             }
+        },
+        methods: {
+            goTo(e, path){
+                let buttons = document.querySelectorAll('.blockBtn');
+                for(let i = 0; i < buttons.length; i++){
+                    if(buttons[i].classList.contains('is-active__btn')){
+                        buttons[i].classList.remove('is-active__btn');
+                        break;
+                    }
+                }
+                if(e.classList.contains('blockBtn')){
+                    e.classList.add('is-active__btn');
+                }else{
+                    e.parentElement.classList.add('is-active__btn');
+                }
+
+                this.$router.push(path);
+            },
+
         }
     }
 </script>
@@ -106,7 +131,9 @@
         margin: 0;
         font-family: 'Roboto', 'Arial', sans-serif;
     }
-
+    .el-menu-item{
+        padding: 0 15px !important;
+    }
     .code-block{
         display: block;
         line-height: 1.8;
@@ -128,28 +155,30 @@
     .el-menu-item .el-menu-item__custom{
         padding-left: 10px !important;
     }
+    .demo-menu-block{
+        padding-bottom: 25px;
+    }
+    .demo__title{
+        /*font-weight: 700;*/
+        /*color: #263238;*/
+        /*font-size: 18px;*/
+        /*line-height: 1.5;*/
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+    }
     .title{
-        font-family: 'Roboto', sans-serif;
-        font-size: 16px;
-        font-weight: 500;
-        color: #263238;
-        letter-spacing: 0;
-        line-height: 24px;
+        margin: 20px 0 10px;
+        border-bottom: 1px solid #dddddd;
+        font-size: 18px;
+        text-align: left;
     }
-    .subtitle{
-        font-family: 'Roboto', sans-serif;
-        font-size: 14px;
-        color: #263238;
-        line-height: 21px;
-        font-weight: 500;
-        font-style: normal;
-        font-stretch: normal;
-        letter-spacing: normal;
-    }
+
     .basic-text{
         font-size: 14px;
         color: #5e6d82;
         line-height: 1.5em;
+        margin: 7px 0;
         & code{
             background-color: #f9fafc;
             padding: 0 4px;
@@ -187,6 +216,7 @@
         overflow-y: auto;
         overflow-x: hidden;
         box-sizing: border-box;
+        padding-bottom: 25px;
         &::-webkit-scrollbar {
             width: 4px;
         }
@@ -204,6 +234,7 @@
         flex-grow: 2;
         overflow: hidden;
         box-sizing: border-box;
+        padding: 10px 0 0 20px;
     }
     .demo-navigation-top{
         display: flex;
@@ -213,15 +244,6 @@
         margin-bottom: 20px;
         text-align: center;
         position: relative;
-        &__title{
-            font-size: 18px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            -webkit-font-smoothing: antialiased;
-            -moz-font-smoothing: antialiased;
-            font-smoothing: antialiased;
-            color: #606266;
-        }
         button {
             position: absolute;
             font-size: 14px;
@@ -237,14 +259,24 @@
     .blockBtn{
         display: block;
         width: 100%;
+        color: #888888;
+        &:hover{
+            color: #263238;
+        }
+        &:focus{
+            color: #263238;
+        }
         &__text-left{
             text-align: left;
         }
     }
+    .is-active__btn{
+        color: #ff5722 !important;
+    }
     .el-menu-item-group__title{
         padding: 15px 0 7px 0;
         text-align: left;
-        padding-left: 20px !important;
+        padding-left: 15px !important;
         font-size: 12px;
     }
     .el-menu-item__custom{ height: auto; }

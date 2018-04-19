@@ -102,6 +102,7 @@
                                 :expand-on-click-node="false"
                                 :render-content="renderContent">
                         </el-tree>
+                        <!--class="custom-tree-node"-->
                     </div>
                     <div class="block">
                         <p>Using scoped slot</p>
@@ -439,13 +440,13 @@
 
             renderContent(h, { node, data, store }) {
                 return (
-                    <span class="custom-tree-node">
-                    <span>{node.label}</span>
-                <span>
-                <el-button size="mini" type="text" on-click={ () => this.append(data) }>Append</el-button>
-                <el-button size="mini" type="text" on-click={ () => this.remove(node, data) }>Delete</el-button>
-                </span>
-                </span>);
+                    <span class="custom-tree-node custom-test">
+                        <span>{node.label}</span>
+                        <span>
+                            <el-button size="mini" type="text" on-click={ () => this.append(data) }>Append</el-button>
+                            <el-button size="mini" type="text" on-click={ () => this.remove(node, data) }>Delete</el-button>
+                        </span>
+                    </span>);
             },
             getCheckedNodes() {
                 console.log(this.$refs.tree.getCheckedNodes());
@@ -523,7 +524,7 @@
 </script>
 
 <style scoped>
-    .custom-tree-node {
+    .custom-tree-node, .custom-test {
         flex: 1;
         display: flex;
         align-items: center;

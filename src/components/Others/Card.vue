@@ -97,30 +97,26 @@
 </script>
 
 <style scoped>
-    .text {
-          font-size: 14px;
-      }
+    /*.text {*/
+          /*font-size: 14px;*/
+      /*}*/
 
-    /*.item {*/
-        /*margin-bottom: 18px;*/
+    /*.clearfix:before,*/
+    /*.clearfix:after {*/
+        /*display: table;*/
+        /*content: "";*/
+    /*}*/
+    /*.clearfix:after {*/
+        /*clear: both*/
     /*}*/
 
-    .clearfix:before,
-    .clearfix:after {
-        display: table;
-        content: "";
-    }
-    .clearfix:after {
-        clear: both
-    }
+    /*.box-card {*/
+        /*width: 480px;*/
+    /*}*/
 
-    .box-card {
-        width: 480px;
-    }
-
-    .item {
-        padding: 7px 0;
-    }
+    /*.item {*/
+        /*padding: 7px 0;*/
+    /*}*/
 
     .box-card {
         width: 320px;

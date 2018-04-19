@@ -5,14 +5,14 @@
         <div class="demo-block-container">
             <div class="demo-block-container__source">
                 <div class="block">
-                    <span class="demonstration">Когда у вас несколько страниц</span>
+                    <span class="demonstration demo-title demonstration-title">Когда у вас несколько страниц</span>
                     <el-pagination
                             layout="prev, pager, next"
                             :total="50">
                     </el-pagination>
                 </div>
                 <div class="block">
-                    <span class="demonstration">Когда у вас больше 7 страниц</span>
+                    <span class="demonstration demo-title demonstration-title">Когда у вас больше 7 страниц</span>
                     <el-pagination
                             layout="prev, pager, next"
                             :total="1000">

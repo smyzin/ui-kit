@@ -1,6 +1,6 @@
 <template>
     <div style="text-align: left;">
-        <h2 class="subtitle">Основной цвет</h2>
+        <h2 class="title">Основной цвет</h2>
         <el-row :gutter="10">
             <el-col :xs="12" :span="6" class="demo-col">
                 <div class="demo-color-box demo-color-box__color_primary">
@@ -11,7 +11,7 @@
             </el-col>
         </el-row>
 
-        <h2 class="subtitle">Дополнительные цвета</h2>
+        <h2 class="title">Дополнительные цвета</h2>
         <el-row :gutter="10">
             <el-col :xs="12" :span="6" class="demo-col">
                 <div class="demo-color-box demo-color-box__color_success">
@@ -43,7 +43,7 @@
             </el-col>
         </el-row>
 
-        <h2 class="subtitle">Нейтральные цвета <i class="mdi mdi-bell"></i></h2>
+        <h2 class="title">Нейтральные цвета</h2>
         <el-row :gutter="10">
             <el-col :xs="12" :span="6" class="demo-col">
                 <div class="demo-color-box-group">
