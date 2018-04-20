@@ -16,7 +16,7 @@
                 СОДЕРЖАНИЕ АРХИВА
             </div>
         </div>
-        <el-button type="primary" class="download__btn" size="medium" @click="download('./static/upoint-ui.zip')">Скачать <i class="el-icon-upload el-icon-right"></i></el-button>
+        <a href="https://github.com/smyzin/ui-kit/raw/master/static/upoint-ui.zip" class="download__btn_link" target="_blank">Скачать <i class="el-icon-upload el-icon-right"></i></a>
     </div>
 </template>
 
@@ -37,6 +37,15 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
     .download__btn{
+        display: block !important;
+        margin: 15px auto !important;
+    }
+    .download__btn_link{
+        width: 78px;
+        height: 20px;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
         display: block !important;
         margin: 15px auto !important;
     }
