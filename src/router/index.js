@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import HelloWorld from '@/components/HelloWorld'
+import Index from '@/components/Index'
 
 import Color from '@/components/Basic/Color'
 import Typography from '@/components/Basic/Typography'
@@ -53,8 +53,9 @@ import Collapse from '@/components/Others/Collapse'
 Vue.use(Router)
 
 export default new Router({
+    mode: 'history',
     routes: [
-        {path: '/', name: 'HelloWorld', component: HelloWorld},
+        {path: '/', name: 'Upoint UI-kit', component: Index},
 
         {path: '/color', name: 'Цвет', component: Color, meta: { next: {name: 'Типографика', path: '/typography'} }},
         {path: '/typography', name: 'Типографика', component: Typography,  meta: { next: {name: 'Кнопки', path: '/button'}, previous: {name: 'Цвет', path: '/color'} }},
@@ -104,5 +105,8 @@ export default new Router({
         {path: '/carousel', name: 'Carousel', component: Carousel, meta: { next: {name: 'Collapse', path: '/collapse'}, previous: {name: 'Card', path: '/card'} }},
         {path: '/collapse', name: 'Collapse', component: Collapse, meta: { previous: {name: 'Carousel', path: '/carousel'} }}
 
-    ]
+    ],
+    scrollBehavior (to, from, savedPosition) {
+        return { x: 0, y: 0 }
+    },
 })

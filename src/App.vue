@@ -11,6 +11,9 @@
                     </el-menu-item-group>
                     <div class="demo-menu-block">
                         <el-menu-item-group>
+                            <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/" type="text" @click="goTo($event.target, '/')">Главная</el-button></el-menu-item>
+                        </el-menu-item-group>
+                        <el-menu-item-group>
                             <template slot="title">Базовые</template>
                             <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/color" type="text" @click="goTo($event.target, '/color')">Цвет</el-button></el-menu-item>
                             <el-menu-item class="el-menu-item__custom" index="ui"><el-button class="blockBtn blockBtn__text-left" data-path="/typography" type="text" @click="goTo($event.target, '/typography')">Типографика</el-button></el-menu-item>
@@ -79,7 +82,7 @@
                     <div class="demo-navigation-top__title demo__title page__title">{{$route.name}}</div>
                     <el-button type="text" v-if="$route.meta.next" @click="top_goTo($route.meta.next.path)">{{$route.meta.next.name}} <i class="el-icon-back" style="transform: rotate(180deg);"></i></el-button>
                 </div>
-                <div class="demo-content">
+                <div class="demo-content" ref="mainContainer">
                     <router-view/>
                 </div>
             </el-main>
@@ -91,7 +94,9 @@
     export default {
         name: 'App',
         watch: {
-            '$route' (to, from) { }
+            '$route' (to, from) {
+                this.$refs.mainContainer.scrollTo(0, 0);
+            }
         },
         mounted(){
             let buttons = document.querySelectorAll('.blockBtn');
@@ -176,10 +181,6 @@
         padding-bottom: 25px;
     }
     .demo__title{
-        /*font-weight: 700;*/
-        /*color: #263238;*/
-        /*font-size: 18px;*/
-        /*line-height: 1.5;*/
         -webkit-font-smoothing: antialiased;
         -moz-font-smoothing: antialiased;
         font-smoothing: antialiased;
@@ -234,6 +235,7 @@
         overflow-x: hidden;
         box-sizing: border-box;
         padding-bottom: 25px;
+        padding-right: 15px !important;
         &::-webkit-scrollbar {
             width: 4px;
         }
@@ -274,9 +276,9 @@
         }
     }
     .blockBtn{
-        display: block;
-        width: 100%;
-        color: #888888;
+        display: block  !important;
+        width: 100%  !important;
+        color: #888888  !important;
         &:hover{
             color: #263238;
         }
@@ -284,7 +286,7 @@
             color: #263238;
         }
         &__text-left{
-            text-align: left;
+            text-align: left !important;
         }
     }
     .is-active__btn{
@@ -296,7 +298,7 @@
         padding-left: 15px !important;
         font-size: 12px;
     }
-    .el-menu-item__custom{ height: auto; }
+    .el-menu-item__custom{ height: auto !important; }
     .demo-container__main{
         width: 1140px;
         padding: 0;

@@ -46,8 +46,8 @@
                               }"
                             @change="handleChange"
                             :data="data">
-                        <el-button class="transfer-footer" slot="left-footer" size="small">Действие</el-button>
-                        <el-button class="transfer-footer" slot="right-footer" size="small">Действие</el-button>
+                        <el-button class="transfer-footer" slot="left-footer" size="mini">Действие</el-button>
+                        <el-button class="transfer-footer" slot="right-footer" size="mini">Действие</el-button>
                     </el-transfer>
                     <p style="text-align: center; margin: 50px 0 20px">Кастомизируйте даные используя <code>scoped</code> слот</p>
                     <div style="text-align: center">

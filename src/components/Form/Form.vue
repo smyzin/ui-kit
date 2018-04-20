@@ -4,7 +4,7 @@
         <p class="basic-text">Включает в себя все виды входных элементов, таких как <code>input</code>, <code>select</code>, <code>radio</code> и <code>checkbox</code>. В каждом компоненте <code>form</code> необходимо использовать поле <code>form-item</code>, которое будет контейнером вашего элемента ввода.</p>
         <div class="demo-block-container">
             <div class="demo-block-container__source">
-                <el-form ref="form" :model="form" label-width="120px">
+                <el-form ref="form" :model="form" label-width="150px">
                     <el-form-item label="Имя активности">
                         <el-input v-model="form.name"></el-input>
                     </el-form-item>
@@ -81,11 +81,11 @@
                     <el-radio-button label="top">Сверху</el-radio-button>
                 </el-radio-group>
                 <div style="margin: 20px;"></div>
-                <el-form :label-position="labelPosition" label-width="100px" :model="formLabelAlign">
+                <el-form :label-position="labelPosition" label-width="150px" :model="formLabelAlign">
                     <el-form-item label="Имя">
                         <el-input v-model="formLabelAlign.name"></el-input>
                     </el-form-item>
-                    <el-form-item label="Место дейтельности">
+                    <el-form-item label="Место деятельности">
                         <el-input v-model="formLabelAlign.region"></el-input>
                     </el-form-item>
                     <el-form-item label="Форма деятельности">
@@ -99,7 +99,7 @@
         <p class="basic-text">Компонент формы позволяет вам проверять свои данные, помогая находить и исправлять ошибки. Просто добавьте атрибут <code>rules</code> для компонента <code>Form</code>, проверьте правила проверки и установите атрибут <code>prop</code> для <code>Form-Item</code> как определенный ключ, который необходимо проверить.</p>
         <div class="demo-block-container">
             <div class="demo-block-container__source">
-                <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="120px" class="demo-ruleForm">
+                <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="150px" class="demo-ruleForm">
                     <el-form-item label="Имя активности" prop="name">
                         <el-input v-model="ruleForm.name"></el-input>
                     </el-form-item>
@@ -153,7 +153,7 @@
         <p class="basic-text">В этом примере показано, как настроить собственные правила проверки, чтобы завершить двухфакторную проверку пароля. Используйте <code>status-icon</code>, чтобы отразить результат проверки как значок.</p>
         <div class="demo-block-container">
             <div class="demo-block-container__source">
-                <el-form :model="ruleForm2" status-icon :rules="rules2" ref="ruleForm2" label-width="120px" class="demo-ruleForm">
+                <el-form :model="ruleForm2" status-icon :rules="rules2" ref="ruleForm2" label-width="150px" class="demo-ruleForm">
                     <el-form-item label="Пароль" prop="pass">
                         <el-input type="password" v-model="ruleForm2.pass" auto-complete="off"></el-input>
                     </el-form-item>
@@ -175,7 +175,7 @@
         <p class="basic-text">Помимо передачи всех правил проверки сразу в форму, вы также можете передавать правила проверки или удалять правила в одном поле формы динамически.</p>
         <div class="demo-block-container">
             <div class="demo-block-container__source">
-                <el-form :model="dynamicValidateForm" ref="dynamicValidateForm" label-width="120px" class="demo-dynamic">
+                <el-form :model="dynamicValidateForm" ref="dynamicValidateForm" label-width="150px" class="demo-dynamic">
                     <el-form-item
                             prop="email"
                             label="Email"
@@ -188,14 +188,14 @@
                     </el-form-item>
                     <el-form-item
                             v-for="(domain, index) in dynamicValidateForm.domains"
-                            :label="'Домен #' + index"
+                            :label="'Домен #' + (index + 1)"
                             :key="domain.key"
                             :prop="'domains.' + index + '.value'"
                             :rules="{
-                              required: true, message: 'домен не может быть пустым', trigger: 'blur'
+                              required: true, message: 'Домен не может быть пустым', trigger: 'blur'
                             }"
                     >
-                        <el-input v-model="domain.value"></el-input><el-button @click.prevent="removeDomain(domain)">Удалить</el-button>
+                        <el-input v-model="domain.value" style="width: calc(100% - 100px);"></el-input><el-button @click.prevent="removeDomain(domain)" style="margin-left: 20px;">Удалить</el-button>
                     </el-form-item>
                     <el-form-item>
                         <el-button type="primary" @click="submitForm('dynamicValidateForm')">Отправить</el-button>
@@ -210,13 +210,13 @@
         <p class="basic-text">Для проверки числового значения нужен модификатор <code>.number</code>, добавленный в привязку ввода <code>v-model</code>, он используется для преобразования строкового значения в число, которое предоставляется Vuejs.</p>
         <div class="demo-block-container">
             <div class="demo-block-container__source">
-                <el-form :model="numberValidateForm" ref="numberValidateForm" label-width="100px" class="demo-ruleForm">
+                <el-form :model="numberValidateForm" ref="numberValidateForm" label-width="150px" class="demo-ruleForm">
                     <el-form-item
-                            label="возраст"
+                            label="Возраст"
                             prop="age"
                             :rules="[
-                              { required: true, message: 'возраст обязателен'},
-                              { type: 'number', message: 'возраст должен быть числом'}
+                              { required: true, message: 'Возраст обязателен'},
+                              { type: 'number', message: 'Возраст должен быть числом'}
                             ]"
                     >
                         <el-input type="age" v-model.number="numberValidateForm.age" auto-complete="off"></el-input>
@@ -233,7 +233,7 @@
         <p class="basic-text">Все компоненты в форме наследуют свой атрибут <code>size</code> из этой Формы. Аналогично, FormItem также имеет атрибут <code>size</code>. Вы можете точно настроить каждый компонент, если вы не хотите, чтобы этот компонент наследовал свой размер от From или FormItem.</p>
         <div class="demo-block-container">
             <div class="demo-block-container__source">
-                <el-form ref="form" :model="sizeForm" label-width="120px" size="large">
+                <el-form ref="form" :model="sizeForm" label-width="150px" size="large">
                     <el-form-item label="Название" size="large">
                         <el-input v-model="sizeForm.name" size="small"></el-input>
                     </el-form-item>

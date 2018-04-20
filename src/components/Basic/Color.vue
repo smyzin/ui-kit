@@ -23,8 +23,8 @@
             <el-col :xs="12" :span="6" class="demo-col">
                 <div class="demo-color-box demo-color-box__color_warning">
                     Warning
-                    <div class="demo-color-box__value">#f7ba2ac</div>
-                    <div class="demo-color-box__value">rgba(247, 186, 42, 1)</div>
+                    <div class="demo-color-box__value">#f7ad31</div>
+                    <div class="demo-color-box__value">rgba(247, 173, 49, 1)</div>
                 </div>
             </el-col>
             <el-col :xs="12" :span="6" class="demo-col">
@@ -126,7 +126,7 @@
 
     .demo-color-box__color_primary{ background-color: #ff5722; }
     .demo-color-box__color_success{ background-color: #13ce66; }
-    .demo-color-box__color_warning{ background-color: #f7ba2a; }
+    .demo-color-box__color_warning{ background-color: #f7ad31; }
     .demo-color-box__color_danger{ background-color: #ff4949; }
     .demo-color-box__color_info{ background-color: #909399; }
     .demo-color-box__color-text_primary{ background-color: #263238; }

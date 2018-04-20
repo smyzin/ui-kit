@@ -125,7 +125,7 @@
             open2() {
                 this.$notify({
                     title: 'Prompt',
-                    message: 'This is a message that does not automatically close',
+                    message: 'This is a message that does not automatically close. So, try it yourself and give us a feedback of it\'s work. И да, это экстра длинный текс для тестов :)',
                     duration: 0
                 });
             },
